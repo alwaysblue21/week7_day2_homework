@@ -3,7 +3,7 @@ const app = express()
 const drinks = require("./models/drinks")
 
 app.get("/drinks", (req, res) => {
-    res.send(drinks)
+    res.render("index.ejs", {drinks})
 })
 
 //Listener
