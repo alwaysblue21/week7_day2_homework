@@ -10,7 +10,13 @@ app.use(morgan("dev"))
 app.use(express.static("public"))
 
 app.get("/drinks/", (req, res) => {
-    res.render("index.ejs", {drinks})
+
+    const capitalize = (text) => {
+        const arr = text.split("")
+        arr[0] = arr[0].toUpperCase()
+        return arr.join("")
+    }
+    res.render("index.ejs", {capitalize, drinks})
 })
 
 app.get("/drinks/:id", (req, res) => {

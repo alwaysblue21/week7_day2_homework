@@ -13,7 +13,7 @@
     <ul>
         <% for(let i = 0; i < drinks.length; i++){ %>
 
-            <li><a href="/drinks/<%= i %>"><%= drinks[i].name %></a></li>
+            <li><a href="/drinks/<%= i %>"><%= capitalize(drinks[i].name) %></a></li>
 
         <% } %>
     </ul>
