@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><% drink.name %></title>
+    <%- include("imports.ejs") %>
 </head>
 <body>
     <h1>At foo bar</h1>
@@ -16,5 +17,12 @@
     <h3>price: $<%= drink.price %></h3>
     
     <h3><a href="/drinks">GO BACK TO LIST OF drinks</a></h3>
+
+    <!-- <style type="text/css">
+        body {
+          color: blanchedalmond;
+          background-color: steelblue;
+        }
+      </style> -->
 </body>
 </html>

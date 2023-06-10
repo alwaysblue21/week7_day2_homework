@@ -1,6 +1,13 @@
+require("dotenv").config()
 const express = require("express");
+const morgan = require("morgan") 
+const PORT = process.env.PORT
 const app = express() 
 const drinks = require("./models/drinks")
+
+
+app.use(morgan("dev"))
+app.use(express.static("public"))
 
 app.get("/drinks/", (req, res) => {
     res.render("index.ejs", {drinks})
@@ -12,7 +19,7 @@ app.get("/drinks/:id", (req, res) => {
     res.render("show.ejs", {drink, id})
 })
 
-//Listener
-app.listen(3000, () => {
-    console.log("Listening on port 3000")
+// LISTENER
+app.listen(PORT, () => {
+    console.log(`LISTENING ON PORT ${PORT}`)
 })
