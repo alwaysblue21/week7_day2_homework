@@ -7,11 +7,14 @@
     <title><% drink.name %></title>
 </head>
 <body>
-    <h1>name: <%= drink.name %></h1>
-    <ul>
-        <li>price: $<%= drink.price %></li>
-        <li><img src="<%= drink.image %>.jpeg" alt="<%= drink.name %>"></li>
-    </ul>
-    <h3><a href="/drink">GO BACK TO LIST OF drinks</a></h3>
+    <h1>At foo bar</h1>
+
+    <h2><%= drink.name %></h2>
+
+    <img src="<%= drink.image %>.jpeg" alt="<%= drink.name %>">
+
+    <h3>price: $<%= drink.price %></h3>
+    
+    <h3><a href="/drinks">GO BACK TO LIST OF drinks</a></h3>
 </body>
 </html>
