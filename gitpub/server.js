@@ -7,7 +7,9 @@ app.get("/drinks/", (req, res) => {
 })
 
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id)
+    const id = req.params.id
+    const drink = drinks[id]
+    res.render("show.ejs", {drink, id})
 })
 
 //Listener
