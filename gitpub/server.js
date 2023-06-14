@@ -23,15 +23,15 @@ app.get("/drinks/", (req, res) => {
 app.get("/drinks/:id", (req, res) => {
     const id = req.params.id
     const drink = drinks[id]
-    const food = foods[id]
-    res.render("show.ejs", {drink, food, id})
+    
+    res.render("show.ejs", {drink, id})
 })
 
 app.get("/foods/:id", (req, res) => {
     const id = req.params.id
-    const drink = drinks[id]
+    
     const food = foods[id]
-    res.render("foods.ejs", {drink, food, id})
+    res.render("foods.ejs", {food, id})
 })
 
 // LISTENER
