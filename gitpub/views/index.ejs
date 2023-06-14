@@ -18,6 +18,16 @@
         <% } %>
     </ul>
 
+    <h1>Gitpub foods</h1>
+
+    <ul>
+        <% for(let i = 0; i < foods.length; i++){ %>
+
+            <li><a href="/foods/<%= i %>"><%= capitalize(foods[i].name) %></a></li>
+
+        <% } %>
+    </ul>
+
     <!-- <style type="text/css">
         body {
           color: blanchedalmond;
